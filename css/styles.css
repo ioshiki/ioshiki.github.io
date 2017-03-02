@@ -1,0 +1,100 @@
+body{
+	height: 100%;
+	background-color: #ffffff;
+	padding: 0;
+	margin: 0;
+}
+
+ul
+{
+	list-style-type: none; /*removes bullets from listed items*/
+	margin:20px; /*20pixels of space between elements*/
+	padding:0px;  /*0 pixels of space on each side of elements*/
+	text-align: right; /*aligns navigation list bar to the right*/
+}
+
+li 
+{
+	/*Display all elements of list inline instead of a vertical list*/
+	display: inline;
+	margin: 15px;
+}
+
+.menubar  /*specific styling for top menubar*/
+{
+	background-color: black;
+	color: white;
+	padding-top:2px;
+	padding-bottom:0px;
+	font-family: 'Josefin Sans' , san-serif;
+	font-size:37px;
+	display: inline-block;
+	margin-bottom: 0px;
+	float: right;
+	width: 100%;
+	
+}
+
+a:link, a:visited
+{
+	color: #ffffff;
+	/*border: 2px solid white;*/
+	text-decoration: none; /*removes hyperlink underlining*/
+}
+a:hover /*mousover color and effects*/
+{
+	background-color:#ffffff;
+	opacity: 0.87;
+	color: #000000;
+
+}
+
+/*#bg { 
+/*selector for background images. 
+we're not putting it into the .bgimage class because
+it would fix our text size   
+	position: fixed;
+	min-width: 100%;
+	min-height: 100%;
+}*/
+div /*main font in division blocks*/
+{
+	font-family: 'Roboto Condensed' , sans-serif;
+	font-size: 40px;
+}
+
+.bgimage  /*bg image 1 class*/
+{
+	opacity: 0.87;
+	display: inline-block; /*removes the ANNOYING WHITE SPACE*/
+	/*background-position: center; keeps image centered*/
+	background-image: url("../images/bgtest.jpg");
+	background-position: center;
+	background-size: cover; /*stretches image*/
+	background-attachment: fixed;
+	background-repeat: no-repeat;
+	min-width: 100%;
+	min-height: 100%;
+	font-size:50px;
+}
+
+.bgimage1 
+{
+	opacity: 0.87;
+	/*background-position: center; keeps image centered*/
+	background-image: url("../images/DSC03507.JPG");
+	background-position: center;
+	background-size: cover; /*stretches image*/
+	background-attachment: fixed;
+	background-repeat: no-repeat;
+	min-width: 100%;
+	min-height: 100%;
+	font-size:50px;
+}
+
+.contactme
+{
+	background-color: white;
+	min-width:100%;
+	min-height: 1000px;
+}
