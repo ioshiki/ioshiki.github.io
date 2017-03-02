@@ -1,8 +1,8 @@
 body{
 	height: 100%;
 	background-color: #ffffff;
-	padding: 0;
-	margin: 0;
+	padding: 0px;
+	margin: 0px;
 }
 
 ul
@@ -20,19 +20,33 @@ li
 	margin: 15px;
 }
 
+#name
+{
+/*float: left; created some problems so I used 
+absolute positioning to manually solve the issue*/
+position: absolute;
+top: 0px;
+left: 0px;
+padding-bottom: 0px;	
+font-family: 'Covered By Your Grace', cursive;
+font-size: 45px;
+}
+
+
 .menubar  /*specific styling for top menubar*/
 {
+	position: fixed;
 	background-color: black;
 	color: white;
 	padding-top:2px;
 	padding-bottom:0px;
 	font-family: 'Josefin Sans' , san-serif;
 	font-size:37px;
-	display: inline-block;
-	margin-bottom: 0px;
+	margin-bottom: 0px; /*prevents blank space between div blocks*/
 	float: right;
 	width: 100%;
-	
+	z-index: 1;  /*stacks on top of all other elements*/
+	opacity:0.87;
 }
 
 a:link, a:visited
@@ -49,51 +63,84 @@ a:hover /*mousover color and effects*/
 
 }
 
-/*#bg { 
-/*selector for background images. 
-we're not putting it into the .bgimage class because
-it would fix our text size   
-	position: fixed;
-	min-width: 100%;
-	min-height: 100%;
-}*/
-div /*main font in division blocks*/
+.intro
+{
+	background-color: #000000;
+	padding-top: 18%; /*shifts text elements to 1/4th the div length*/
+	color: #ffffff;
+	min-height: 860px;
+	font-family: 'Oswald', sans-serif;
+	font-size: 50px;
+	text-align: center;
+}
+
+.introred /*used for motivational text*/
+{
+	color: #ff0000;
+	background-color: white;
+	font-family: 'Oswald', sans-serif;
+	font-size: 50px;
+	
+}
+
+
+
+h1 /*default font for all headers*/
 {
 	font-family: 'Roboto Condensed' , sans-serif;
-	font-size: 40px;
+	font-size: 60px;
 }
 
-.bgimage  /*bg image 1 class*/
+h2 /*default font for all headers*/
+{
+	font-family: 'Roboto Condensed' , sans-serif;
+	font-size: 44px;
+}
+
+
+p
+{
+	font-family: 'Roboto Condensed' , sans-serif;
+	font-size: 26px;
+}
+
+
+.aboutme  /*Section 1 - About me */
 {
 	opacity: 0.87;
-	display: inline-block; /*removes the ANNOYING WHITE SPACE*/
-	/*background-position: center; keeps image centered*/
-	background-image: url("../images/bgtest.jpg");
+	padding-top: 5%;
+	/*display: inline-block; removes the ANNOYING WHITE SPACE*/
+	background-color: white;
 	background-position: center;
 	background-size: cover; /*stretches image*/
 	background-attachment: fixed;
 	background-repeat: no-repeat;
 	min-width: 100%;
-	min-height: 100%;
+	min-height: 900px;
+	font-family: 'Roboto Condensed' , sans-serif;
 	font-size:50px;
+	display: inline-block;
 }
 
-.bgimage1 
+.interests
 {
 	opacity: 0.87;
+	padding-top: 5%;
 	/*background-position: center; keeps image centered*/
-	background-image: url("../images/DSC03507.JPG");
+	background-image: url("../images/DSC05270.JPG");
 	background-position: center;
 	background-size: cover; /*stretches image*/
 	background-attachment: fixed;
 	background-repeat: no-repeat;
 	min-width: 100%;
-	min-height: 100%;
+	min-height: 900px;
 	font-size:50px;
+	display: inline-block;
 }
 
 .contactme
 {
+	padding-top: 5%;
 	background-color: white;
 	min-width:100%;
 	min-height: 1000px;
