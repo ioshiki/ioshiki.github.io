@@ -1,10 +1,21 @@
+/*Properties that will persist throughout the website*/
 body{
 	height: 100%;
 	background-color: #ffffff;
 	padding: 0px;
-	margin: 0px;
+	margin: 0;
 	font-family: 'Roboto Condensed' , sans-serif;
 }
+
+
+
+a:link, a:visited
+{
+	text-decoration: none; /*removes hyperlink underlining*/
+}
+
+
+/* Menubar items */
 
 ul
 {
@@ -21,7 +32,8 @@ li
 	margin: 15px;
 }
 
-#name
+
+#name /*My Name on the top left corner*/
 {
 /*float: left; created some problems so I used 
 absolute positioning to manually solve the issue*/
@@ -47,23 +59,29 @@ font-size: 45px;
 	margin-bottom: 0px; /*prevents blank space between div blocks*/
 	float: right;
 	width: 100%;
-	z-index: 1;  /*stacks on top of all other elements*/
+	/* z-index stacks on top of all other elements 
+	allowing the menubar to stay on top of all other objects on the page*/
+	z-index: 1;  
 	opacity:0.87;
 }
 
-a:link, a:visited
+/*Anchor styling for links within the menubar*/ 
+.menubar a:link, a:visited
 {
 	color: #ffffff;
-	/*border: 2px solid white;*/
 	text-decoration: none; /*removes hyperlink underlining*/
 }
-a:hover /*mousover color and effects*/
+
+.menubar a:hover /*mousover color and effects*/
 {
 	background-color:#ffffff;
 	opacity: 0.87;
 	color: #000000;
-
 }
+
+
+
+/*top page motivational text*/
 
 .intro
 {
@@ -86,25 +104,9 @@ a:hover /*mousover color and effects*/
 }
 
 
+/*About Me*/
 
-h1 /*default font for all headers*/
-{
-	font-size: 60px;
-}
-
-h2 /*default font for all headers*/
-{
-	font-size: 44px;
-}
-
-
-p
-{
-	font-size: 26px;
-}
-
-
-.aboutme  /*Section 1 - About me */
+.aboutme  
 {
 	opacity: 0.87;
 	padding-top: 5%;
@@ -120,22 +122,105 @@ p
 	display: inline-block; /*removes white space between divs*/
 }
 
+
+h1 /*default font size for header1*/
+{
+	font-size: 60px;
+}
+h2 /*default font size for all header2*/
+{
+	font-size: 44px;
+}
+
+p 
+{
+	font-size: 26px;
+}
+
+
+/* PORTFOLIO and INTERESTS section Starts here*/
+
 .interests
 {
-	opacity: 0.87;
+	opacity: 0.7;
 	padding-top: 5%;
-	/*background-position: center; keeps image centered*/
-	/*background-image: url("../images/DSC05270.JPG");*/
-	
-	background-position: center;
-	/*background-size: cover; stretches image*/
-	background-attachment: fixed;
-	background-repeat: no-repeat;
 	min-width: 100%;
-	min-height: 900px;
+	min-height: 1000px;
 	font-size:50px;
+	background-color: red;
 	display: inline-block;
+	text-align: center;
 }
+
+/*setting the margin between images so it scales w/ window size*/
+.interests img  
+{
+	/*margin: 1em;*/
+	padding-left: 2.5%;
+	float: left;
+	width: 25%;
+	margin: 2.5%;
+	display: inline;
+	
+}
+
+.interests p  /*alignment for text under images*/ 
+{
+	float: left;
+	width: 33.33%;
+	display: inline; 
+}	
+
+
+/*for the columns to go vertically stacking*/
+.book
+{
+	float: left;
+	width: 100%;
+	background-color: blue;
+	color: #ffffff;
+}
+
+.fit
+{
+	float: left;
+	width: 100%;
+	background-color: #f2f2f2;
+	color: #000000;
+
+}
+
+.arts
+{
+	float: left;
+	width: 100%;
+	background-color: #ff0000;
+
+}
+
+/* styling and formatting for the github section*/
+.portfolio
+{
+	padding-top: 5%;
+	min-width: 100%;
+	min-height: 400px;
+	font-size:50px;
+	background-color: white;
+	display: inline-block;
+	text-align: center;
+}
+
+.portfolio img  
+{
+	/*margin: 1em;*/
+	float: 36%;
+	width: 25%;
+	display: inline;
+	
+}
+
+
+/*WINDOWS FORM */
 
 .contactme
 {
@@ -146,6 +231,7 @@ p
 	min-height: 1000px;
 }
 
+/*font change for labels*/
 label
 {
 	font-family: 'Josefin Sans' , san-serif;
@@ -153,13 +239,27 @@ label
 	color: #ffffff;
 }
 
+/*styling for the input fields and submit button*/
 
 input[type=text], textarea
 {
-	width: 60%;
+	width: 60%; /*input area should cover 60% of the screen*/
 	padding: 10px;
 	border: 3px solid #ff2233; /*light red shade border around fields*/
 	border-radius: 2px; /*rounded borders*/
 	margin-top: 10px;
 	margin-bottom: 20px;
 }
+
+input[type=submit]
+{
+	width: 20%; /*submit button is 40% of the screen width*/
+	padding: 10px;
+	border: 3px solid black;
+	border-radius: 2px;
+	font-family: 'Josefin Sans' , san-serif;
+	font-size: 30px;
+	text-align: center;
+}
+
+	
